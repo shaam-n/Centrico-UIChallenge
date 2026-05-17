@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../component/AuthLayout";
+import MailIcon from "../assests/Mail.png";
+import PhoneIcon from "../assests/Phone.png";
 
 const MethodSelect = () => {
   const navigate = useNavigate();
@@ -32,7 +34,14 @@ const MethodSelect = () => {
             <div
               className={`method-option-card ${selectedMethod === "email" ? "active" : ""}`}
               onClick={() => setSelectedMethod("email")}>
-              <div className='method-icon-wrapper email-bg'>✉️</div>
+              <div className='method-icon-wrapper'>
+                <img
+                  src={MailIcon}
+                  alt='Email'
+                  className='method-icon-img'
+                  style={{ width: "50px", height: "50px" }}
+                />
+              </div>
               <div className='method-text-details'>
                 <span className='method-label-title'>Email</span>
                 <span className='method-masked-value'>********@mail.com</span>
@@ -42,7 +51,14 @@ const MethodSelect = () => {
             <div
               className={`method-option-card ${selectedMethod === "mobile" ? "active" : ""}`}
               onClick={() => setSelectedMethod("mobile")}>
-              <div className='method-icon-wrapper phone-bg'>📞</div>
+              <div className='method-icon-wrapper'>
+                <img
+                  src={PhoneIcon}
+                  alt='Phone'
+                  className='method-icon-img'
+                  style={{ width: "50px", height: "50px" }}
+                />
+              </div>
               <div className='method-text-details'>
                 <span className='method-label-title'>Phone Number</span>
                 <span className='method-masked-value'>**** **** **** 2345</span>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../component/AuthLayout";
+import SadIcon from "../assests/sad.png";
 
 const PasswordFailure = () => {
   const navigate = useNavigate();
@@ -14,7 +15,18 @@ const PasswordFailure = () => {
     <AuthLayout>
       <div className='status-result-view'>
         <div className='status-graphic-container'>
-          <div className='sad-face-icon-wrapper'>☹</div>
+          <div className='sad-face-icon-wrapper'>
+            <img
+              src={SadIcon}
+              alt='sad-face'
+              className='status-vector-img'
+              style={{
+                width: "48px",
+                height: "48px",
+                objectFit: "contain",
+              }}
+            />
+          </div>
         </div>
 
         <div className='text-center' style={{ marginBottom: "40px" }}>

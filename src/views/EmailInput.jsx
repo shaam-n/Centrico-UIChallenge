@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../component/AuthLayout";
 import { mockApiService } from "../services/mockApi";
+import MailIcon from "../assests/mail-x.png";
 
 const EmailInput = () => {
   const navigate = useNavigate();
@@ -12,7 +13,6 @@ const EmailInput = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic structural regex check [cite: 17]
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email) {
       setError("Email address is required");
@@ -53,7 +53,18 @@ const EmailInput = () => {
         <form onSubmit={handleSubmit}>
           <div className='form-group'>
             <div className='input-with-icon-wrapper'>
-              <span className='input-inline-icon'>✉️</span>
+              <span className='input-inline-icon'>
+                <img
+                  src={MailIcon}
+                  alt='Email Icon'
+                  className='input-field-icon-img'
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    objectFit: "contain",
+                  }}
+                />
+              </span>
               <input
                 type='email'
                 className={`custom-input icon-padding ${error ? "input-border-error" : ""}`}

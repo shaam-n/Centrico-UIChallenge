@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../component/AuthLayout";
 import { mockApiService } from "../services/mockApi";
+import PhoneCall from "../assests/phonex.png";
 
 const MobileInput = () => {
   const navigate = useNavigate();
@@ -69,7 +70,17 @@ const MobileInput = () => {
             {/* Country Code Dropdown with 10-Digit field */}
             <div className='phone-input-container'>
               <div className='phone-prefix-addon'>
-                <span>📞</span>
+                <img
+                  src={PhoneCall}
+                  alt='Phone Icon'
+                  className='input-field-icon-img'
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    objectFit: "contain",
+                    marginRight: "6px",
+                  }}
+                />
                 <select
                   className='country-code-select'
                   value={countryCode}

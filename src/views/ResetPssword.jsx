@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../component/AuthLayout";
 import { mockApiService } from "../services/mockApi";
+import LockIcon from "../assests/lock.png";
 
 // Configuration Setter Prop
 const ResetPassword = ({ setStatusConfig }) => {
@@ -68,7 +69,18 @@ const ResetPassword = ({ setStatusConfig }) => {
         <form onSubmit={handleSubmit}>
           <div className='form-group'>
             <div className='input-with-icon-wrapper'>
-              <span className='input-inline-icon default-lock-color'>🔒</span>
+              <span className='input-inline-icon default-lock-color'>
+                <img
+                  src={LockIcon}
+                  alt='lock'
+                  className='status-vector-img'
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    objectFit: "contain",
+                  }}
+                />
+              </span>
               <input
                 type={showPassword ? "text" : "password"}
                 className={`custom-input icon-padding right-icon-padding ${error ? "input-border-error" : ""}`}
@@ -128,7 +140,18 @@ const ResetPassword = ({ setStatusConfig }) => {
           {/* Confirm Password field block */}
           <div className='form-group' style={{ marginTop: "24px" }}>
             <div className='input-with-icon-wrapper'>
-              <span className='input-inline-icon muted-lock-color'>🔒</span>
+              <span className='input-inline-icon muted-lock-color'>
+                <img
+                  src={LockIcon}
+                  alt='lock'
+                  className='status-vector-img'
+                  style={{
+                    width: "24px",
+                    height: "24px",
+                    objectFit: "contain",
+                  }}
+                />
+              </span>
               <input
                 type={showConfirmPassword ? "text" : "password"}
                 className={`custom-input icon-padding right-icon-padding ${error ? "input-border-error" : ""}`}

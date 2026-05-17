@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../component/AuthLayout";
+import SuccessIcon from "../assests/ok.png";
 
 const PasswordSuccess = () => {
   const navigate = useNavigate();
@@ -14,8 +15,19 @@ const PasswordSuccess = () => {
     <AuthLayout>
       <div className='status-result-view'>
         <div className='status-graphic-container'>
-          <div className='status-circle-frame password-update-success-circle'>
-            <span className='password-success-checkmark'>✓</span>
+          <div>
+            <span>
+              <img
+                src={SuccessIcon}
+                alt='successIcon'
+                className='status-vector-img'
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  objectFit: "contain",
+                }}
+              />
+            </span>
           </div>
         </div>
 
