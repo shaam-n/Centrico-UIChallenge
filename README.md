@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+Key Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Dual-Channel Verification Tracks: Separated validation logic implementations for both an Email OTP process and a 2-minute polling / security pin confirmation flow via Mobile Device Authorization.
+- Dynamic State-Driven Views: Utilizes centralized state routing to share transactional feedback states safely.
+- Input & Security Protections: Real-time character sanitization (non-digit stripping), dynamic visual countdown clocks, and explicit secure visibility eye-toggles on sensitive password inputs.
+- Comprehensive UX Fidelity: Built following professional layout parameters targeting high fidelity across mobile breakpoints (320px–480px) and wide desktop viewports (1200px–1600px).
 
-## Available Scripts
+Technology Stack & Architecture
 
-In the project directory, you can run:
+- Core Library: React (Hooks, state management, and side-effect refs)
+- Routing Engine: React Router DOM v6 (BrowserRouter, Routes, Route, Maps)
+- Styling Architecture: Semantic HTML5 combined with modular CSS layer isolation (variables.css, layout.css, component.css)
 
-### `npm start`
+Local Environment Installation & Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the Project Repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone [https://github.com/shaam-n/Centrico-UIChallenge.git](https://github.com/shaam-n/Centrico-UIChallenge.git)
+cd Centrico-UIChallenge
 
-### `npm test`
+2. Install Project Dependency Modules
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the required application dependencies configured in package.json(Note: Git  ignores node_modules/ using .gitignore settings):
 
-### `npm run build`
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Launch the Local Development Server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Execute the start script to boot the environment:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm start
 
-### `npm run eject`
+The application will spin up instantly. Open your browser and navigate to http://localhost:3000 to view the live interface.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Mock API Behavior Matrix for Evaluation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To accurately test successful routes or trigger defensive form exception workflows, use these hardcoded evaluation rules within the view inputs:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Email OTP Tracking Path (/reset-email):
+* Entering error@mail.com explicitly triggers a missing profile exception string. Any other syntactically valid email completes successfully.
+* On the OTP Verification view (/verify-otp), typing 1234 acts as the authorized access code. Any other 4-digit entry throws an explicit invalid code alert.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Mobile Authentication Path (/reset-mobile):
+* In the Mobile Authentication(/verify-mobile), entering the authorization code 7 unlocks. Any other value throws a device mismatch error.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Password Change Commit Layout (/reset-password):
+* Passwords must match exactly and length greater than or equal to 6 characters.
+* Entering fail1234 as the newly provided password intentionally breaks a security validation reuse constraint, catch block error handling.
