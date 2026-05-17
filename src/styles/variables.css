@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #0052cc;
+  --primary-hover: #0043a4;
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --card-bg: #ffffff;
+  --text-main: #172b4d;
+  --text-muted: #5e6c84;
+  --border-color: #dfe1e6;
+  --error-color: #de350b;
+  --radius-card: 12px;
+  --radius-input: 6px;
+  --transition-smooth: all 0.2s ease-in-out;
+}

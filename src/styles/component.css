@@ -1,0 +1,484 @@
+.auth-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 12px;
+  color: #777777;
+  margin-bottom: 8px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.remember-me-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.remember-me-container input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.forgot-password-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.forgot-password-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b44ff;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.button-center-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.custom-btn {
+  width: 60%;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #6d4aff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #5533ff;
+}
+
+.text-center-header {
+  margin-bottom: 48px;
+}
+
+.auth-title-center {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 12px 0;
+}
+
+.auth-subtitle-center {
+  font-size: 14px;
+  color: #7a869a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.method-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.method-option-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border: 1px solid #444444;
+  border-radius: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.method-option-card.active {
+  border-color: #6d4aff;
+  background-color: #f3efff;
+  box-shadow: 0 0 0 1px #6d4aff;
+}
+
+.method-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+.email-bg {
+  background-color: #2b44ff;
+  color: #ffffff;
+}
+
+.phone-bg {
+  background-color: #5c4343;
+  color: #ffffff;
+}
+
+.method-text-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.method-label-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 4px;
+}
+
+.method-masked-value {
+  font-size: 13px;
+  color: #777777;
+}
+
+.input-with-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-inline-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 16px;
+  color: #6d4aff;
+  pointer-events: none;
+}
+
+.custom-input.icon-padding {
+  padding-left: 48px;
+}
+
+.error-text-message {
+  font-size: 12px;
+  color: #df2020;
+  margin-top: 6px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.input-border-error {
+  border-color: #df2020 !important;
+}
+
+.otp-boxes-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+
+.otp-digit-box {
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #444444;
+  border-radius: 12px;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease-in-out;
+}
+
+.otp-digit-box:focus {
+  border-color: #2b44ff;
+  box-shadow: 0 0 0 1px #2b44ff;
+}
+
+.resend-code-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #107c41;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.resend-code-link:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.status-graphic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.success-checkmark-vector {
+  font-size: 48px;
+  font-weight: bold;
+  color: #24b47e;
+}
+
+.error-cross-vector {
+  font-size: 48px;
+  font-weight: bold;
+  color: #de350b;
+}
+
+.status-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.text-success {
+  color: #24b47e;
+}
+.text-error {
+  color: #de350b;
+}
+
+.status-main-message {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.status-sub-message {
+  font-size: 14px;
+  color: #777777;
+  margin: 0;
+}
+
+.custom-btn.btn-success-bg {
+  background-color: #24b47e !important;
+  color: #ffffff;
+}
+
+.custom-btn.btn-success-bg:hover {
+  background-color: #1e9668 !important;
+}
+
+.custom-btn.btn-danger-bg {
+  background-color: #f83232 !important;
+  color: #ffffff;
+  border: none;
+  font-weight: 500;
+}
+
+.custom-btn.btn-danger-bg:hover {
+  background-color: #e02424 !important;
+}
+
+.phone-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.phone-prefix-addon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 0 14px 16px;
+  background-color: #ffffff;
+}
+
+.country-code-select {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  outline: none;
+  padding-right: 4px;
+}
+
+.custom-input.phone-input-field {
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  padding-left: 12px;
+  width: 100%;
+  box-shadow: none !important;
+}
+
+.phone-input-container:focus-within {
+  border-color: #6d4aff;
+  box-shadow: 0 0 0 1px #6d4aff;
+}
+
+.phone-input-container:has(.input-border-error) {
+  border-color: #df2020 !important;
+}
+
+.security-number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f8fa;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  padding: 32px;
+  margin: 32px 0;
+}
+
+.security-digit-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #333333;
+  border: 1px solid #444444;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.polling-countdown-feedback {
+  margin-top: 16px;
+}
+
+.countdown-clock-text {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+}
+
+.countdown-clock-text strong {
+  color: #6d4aff;
+}
+
+.custom-input.right-icon-padding {
+  padding-right: 48px;
+}
+
+.input-visibility-toggle-btn {
+  position: absolute;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #777777;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  user-select: none;
+}
+
+.default-lock-color {
+  color: #2b44ff;
+}
+
+.muted-lock-color {
+  color: #a5adba;
+}
+
+.input-visibility-toggle-btn {
+  position: absolute;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  user-select: none;
+}
+
+.eye-svg-icon {
+  width: 20px;
+  height: 20px;
+  color: #7a869a;
+  transition: color 0.15s ease;
+}
+
+.input-visibility-toggle-btn:hover .eye-svg-icon {
+  color: #4c5a70;
+}
+
+.status-circle-frame.password-update-success-circle {
+  width: 96px;
+  height: 96px;
+  background-color: #24b47e;
+  border: 8px solid #eaf8f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.password-success-checkmark {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.custom-btn.btn-success-bg {
+  background-color: #24b47e !important;
+  color: #ffffff;
+  border: none;
+  font-weight: 500;
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.custom-btn.btn-success-bg:hover {
+  background-color: #1e9a6b !important;
+}

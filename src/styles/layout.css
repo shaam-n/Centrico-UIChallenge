@@ -1,0 +1,26 @@
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  /* box-shadow: 5px 5px 15px;
+  border-radius: 10px; */
+  background: transparent;
+}
+
+@media (min-width: 1200px) {
+  .auth-card {
+    max-width: 600px;
+    padding: 20px;
+  }
+}
